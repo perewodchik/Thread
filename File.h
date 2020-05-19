@@ -1,20 +1,18 @@
 #pragma once
 #include <iostream>
-#include <filesystem>
 
-namespace fs = std::filesystem;
 
-class File
+struct File
 {
-public:
-	enum class FILETYPE { jpg, mp3 };
-	File(fs::path path, FILETYPE type)
+	File(std::string _fileName, char* _buffer, int _size)
 	{
-		m_path = path;
-		m_fileType = type;
+		fileName = _fileName;
+		buffer = _buffer;
+		size = _size;
 	}
-private:
-	FILETYPE m_fileType;
-	fs::path m_path;
+
+	std::string fileName;
+	char* buffer;
+	int size;
 };
 

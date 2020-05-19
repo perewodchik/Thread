@@ -15,5 +15,6 @@
 int main()
 {
 	FileManager fileManager;
-	fileManager.readFiles();
+	fileManager.run();
+	return 0;
 }
